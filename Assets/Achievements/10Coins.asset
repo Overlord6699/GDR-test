@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af36c07b4214c6c4499fc7574605c33c, type: 3}
+  m_Name: 10Coins
+  m_EditorClassIdentifier: 
+  OnAchievementComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  Target: {fileID: 11400000, guid: 1c862790fb0f7fb4d9fe1ef27c916df9, type: 2}
+  Goal: 10
