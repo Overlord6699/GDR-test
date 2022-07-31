@@ -9,6 +9,8 @@ namespace GDRTest {
         private ChangeableValue<bool> _isMoving;
         [SerializeField]
         private InputController _input;
+        [SerializeField]
+        private TrackRenderer _trackRenderer;
 
         [SerializeField]
         private float _speed = 0.5f;
@@ -59,6 +61,13 @@ namespace GDRTest {
         {
             transform.Translate(_direction * _speed * Time.deltaTime);
 
+            _trackRenderer.ShowTrajectory(transform.position, _speed, _target);
+
+            ProcessSavedPoints();
+        }
+
+        private void ProcessSavedPoints()
+        {
             if (((Vector2)transform.position - _target).magnitude < _accuracy)
             {
                 _prevPosition = transform.position;
@@ -71,7 +80,7 @@ namespace GDRTest {
                 }
 
                 if (_input.NumOfPoints == 0)
-                {                   
+                {
                     _isMoving.Value = false;
                 }
             }
